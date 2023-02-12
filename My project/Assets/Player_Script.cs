@@ -25,7 +25,13 @@ public class Player_Script : MonoBehaviour
                 {
                     rb.AddForce(Vector2.up * jump_power);
                 }
-            }
+            }    
+        } 
+    }
+    private void FixedUpdate()
+    {
+        if (!dm.game_over)
+        {
             if (Input.GetKey(KeyCode.A))
             {
                 transform.position -= (Vector3)Vector2.right * speed * Time.deltaTime;
@@ -34,7 +40,7 @@ public class Player_Script : MonoBehaviour
             {
                 transform.position += (Vector3)Vector2.right * speed * Time.deltaTime;
             }
-        } 
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
