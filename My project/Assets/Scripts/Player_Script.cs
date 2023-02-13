@@ -66,6 +66,10 @@ public class Player_Script : MonoBehaviour
             health = 0;
             Physics.gravity = Vector2.up * -3;
         }
+        else if (collision.gameObject.tag.Equals("Damage"))
+        {
+            health -= 1;
+        }
     }
 }
 
