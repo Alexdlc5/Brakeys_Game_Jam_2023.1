@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 174e68db654c2d64da1f87dc90c8db7b
+guid: 8a6881849f0e35446a77dd5dc8a99c45
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,106 +117,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dungeon_TileSet_0
+      name: Lava_Tile-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1120
+        y: 0
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fb1a722953b99b45b90f3919cb6f93a
-      internalID: 598460457
+      spriteID: 0ef34253f5b89b549b322c3319f61150
+      internalID: 1355248403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dungeon_TileSet_1
+      name: Lava_Tile-Sheet_1
       rect:
         serializedVersion: 2
         x: 160
-        y: 1120
+        y: 0
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cf07a78d14d0e249b6487b0dc321440
-      internalID: -162403379
+      spriteID: c373995c7e0722e4e9d9b0968e7e011f
+      internalID: -1738900139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dungeon_TileSet_2
+      name: Lava_Tile-Sheet_2
       rect:
         serializedVersion: 2
         x: 320
-        y: 1120
+        y: 0
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b4abd0ecc90c884fa10c27a0ff2b94c
-      internalID: 1449349195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dungeon_TileSet_3
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 1120
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a53f6a4dd4cf09a4995db06aba035447
-      internalID: 1503478889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dungeon_TileSet_4
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1120
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 207615a7b15ce5d4fa053556e139e4d9
-      internalID: 1811945380
+      spriteID: 4136f04a62fb60a4186bc60e44a2a346
+      internalID: 1904538683
       vertices: []
       indices: 
       edges: []
@@ -232,11 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dungeon_TileSet_1: -162403379
-      Dungeon_TileSet_0: 598460457
-      Dungeon_TileSet_3: 1503478889
-      Dungeon_TileSet_4: 1811945380
-      Dungeon_TileSet_2: 1449349195
+      Lava_Tile-Sheet_2: 1904538683
+      Lava_Tile-Sheet_0: 1355248403
+      Lava_Tile-Sheet_1: -1738900139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

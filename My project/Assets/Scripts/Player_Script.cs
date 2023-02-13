@@ -10,6 +10,8 @@ public class Player_Script : MonoBehaviour
     public Ground_Check groundCollider;
     public Rigidbody2D rb;
     public Dungeon_Manager dm;
+    public Animator animator;
+    private bool R = false;
     // Update is called once per frame
     void Update()
     {
@@ -30,17 +32,27 @@ public class Player_Script : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        animator.SetInteger("Action", 0);
         if (!dm.game_over)
         {
             if (Input.GetKey(KeyCode.A))
             {
+                R = false;
+                animator.SetInteger("Action", 1);
                 transform.position -= (Vector3)Vector2.right * speed * Time.deltaTime;
             }
             if (Input.GetKey(KeyCode.D))
             {
+                R = true;
+                animator.SetInteger("Action", 1);
                 transform.position += (Vector3)Vector2.right * speed * Time.deltaTime;
             }
         }
+        if (!groundCollider.touching_ground)
+        {
+            animator.SetInteger("Action", 3);
+        } 
+        animator.SetBool("R", R);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,7 +60,12 @@ public class Player_Script : MonoBehaviour
         {
             dm.won = true;
             dm.game_over = true;
-        }  
+        }
+        else if (collision.gameObject.tag.Equals("Kill"))
+        {
+            health = 0;
+            Physics.gravity = Vector2.up * -3;
+        }
     }
 }
 

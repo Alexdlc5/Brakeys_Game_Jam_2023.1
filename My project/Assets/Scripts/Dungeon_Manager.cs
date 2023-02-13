@@ -14,8 +14,11 @@ public class Dungeon_Manager : MonoBehaviour
     public GameObject safe_zone;
     //UI
     public TextMeshProUGUI timer;
+    public RawImage[] pausebuttonsprites;
+    public Button pausebutton;
     private void Start()
     {
+        pausebutton.onClick.AddListener(pause_play);
         timer.text = "Objective: Find the treasure!";
     }
     // Update is called once per frame
@@ -43,5 +46,21 @@ public class Dungeon_Manager : MonoBehaviour
             escape_timer -= Time.deltaTime;
             timer.text = "Objective: Escape!   Time until collapse: " + (int)escape_timer;
         }
+    }
+    public void pause_play()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            pausebuttonsprites[0].gameObject.SetActive(true);
+            pausebuttonsprites[1].gameObject.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            pausebuttonsprites[0].gameObject.SetActive(false);
+            pausebuttonsprites[1].gameObject.SetActive(true);
+        }
+        
     }
 }

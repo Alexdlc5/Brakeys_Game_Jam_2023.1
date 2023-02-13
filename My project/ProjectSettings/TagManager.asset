@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Safe zone
+  - Kill
   layers:
   - Default
   - TransparentFX
