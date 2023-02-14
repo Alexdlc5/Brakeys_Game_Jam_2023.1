@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Script : MonoBehaviour
 {
+    public float respawn_delay = 1;
     public float health = 10;
     public float speed = 1;
     public float jump_power = 1;
@@ -11,13 +13,28 @@ public class Player_Script : MonoBehaviour
     public Rigidbody2D rb;
     public Dungeon_Manager dm;
     public Animator animator;
+    public ParticleSystem blood;
     private bool R = false;
+    private void Start()
+    {
+        blood.Pause();
+    }
     // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
+            animator.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            blood.Play();
             dm.game_over = true;
+            if (respawn_delay > 0)
+            {
+                respawn_delay -= Time.deltaTime;
+            }
+            else
+            {
+                SceneManager.LoadScene(dm.level + 2);
+            }
         }
         if (!dm.game_over)
         {
