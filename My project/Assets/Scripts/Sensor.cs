@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sensor : MonoBehaviour
 {
+    public bool dont_deactivate = false;
     public Animator animator;
     public bool pressure_anim_playing = false;
     public GameObject object_to_show;
@@ -29,7 +30,7 @@ public class Sensor : MonoBehaviour
                 damage_active = true;
             }
             //deactivation timer 
-            if (damage_active)
+            if (damage_active && !dont_deactivate)
             {
                 if (deactivation_timer < deactivation_time)
                 {
