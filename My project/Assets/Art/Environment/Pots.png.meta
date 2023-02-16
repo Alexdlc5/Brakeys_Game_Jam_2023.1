@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 241a9df6bbb157a44bf8cf5e7af1066c
+guid: abc8a595839253e4c997b046b3a75476
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 160
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,55 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Backround_Dungeon_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d9b732511f597f49abe217b6ad0cd61
-      internalID: 1915727293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Backround_Dungeon_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d57631cba73a20b48b24eee954b867b8
-      internalID: -14543082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Backround_Dungeon_2
+      name: Pots_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 160
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 988fc552442b3dd4899df5200357637a
-      internalID: -2132069999
+      spriteID: 52f33120b70198e4dbefe28c87c3e376
+      internalID: 1996998875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Backround_Dungeon_3
+      name: Pots_1
       rect:
         serializedVersion: 2
-        x: 320
+        x: 160
         y: 0
-        width: 320
-        height: 320
+        width: 160
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +152,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb01009a16257148b0648c16dfafcd3
-      internalID: 1097015346
+      spriteID: 20e0434ba61d21a4199f3a97028678ab
+      internalID: -1427200243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pots_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce6c52f2a033604c9c0f1054b4df11c
+      internalID: 1013877358
       vertices: []
       indices: 
       edges: []
@@ -211,10 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Backround_Dungeon_2: -2132069999
-      Backround_Dungeon_0: 1915727293
-      Backround_Dungeon_3: 1097015346
-      Backround_Dungeon_1: -14543082
+      Pots_0: 1996998875
+      Pots_1: -1427200243
+      Pots_2: 1013877358
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

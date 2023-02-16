@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ground_Check : MonoBehaviour
 {
+    public bool side_check = false;
     public bool touching_ground = false;
     HashSet<GameObject> ground_objects = new HashSet<GameObject>();
     private void Update()
@@ -20,14 +21,22 @@ public class Ground_Check : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!ground_objects.Contains(collision.gameObject) && collision.gameObject.tag.Equals("Ground"))
+        if (!side_check && !ground_objects.Contains(collision.gameObject) && collision.gameObject.tag.Equals("Ground") || collision.gameObject.tag.Equals("Pushable"))
+        {
+            ground_objects.Add(collision.gameObject);
+        }
+        else if (side_check && !ground_objects.Contains(collision.gameObject) && collision.gameObject.tag.Equals("Pushable"))
         {
             ground_objects.Add(collision.gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Ground"))
+        if (!side_check && collision.gameObject.tag.Equals("Ground") || collision.gameObject.tag.Equals("Pushable"))
+        {
+            ground_objects.Remove(collision.gameObject);
+        }
+        else if (side_check && collision.gameObject.tag.Equals("Pushable"))
         {
             ground_objects.Remove(collision.gameObject);
         }

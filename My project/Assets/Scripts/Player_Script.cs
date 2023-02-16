@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player_Script : MonoBehaviour
 {
+    public Ground_Check[] Left_and_Right;
     public float respawn_delay = 1;
     public float health = 10;
     public float speed = 1;
@@ -47,7 +48,11 @@ public class Player_Script : MonoBehaviour
                     rb.AddForce(Vector2.up * jump_power);
                 }
             }    
-        } 
+        }
+        if (Left_and_Right[0].touching_ground || Left_and_Right[1].touching_ground)
+        {
+            animator.SetInteger("Action", 2);
+        }
     }
     private void FixedUpdate()
     {
@@ -77,6 +82,10 @@ public class Player_Script : MonoBehaviour
             collider2D.offset = new Vector2(collider2D.offset.x, 0.1096186f);
         } 
         animator.SetBool("R", R);
+        if (Left_and_Right[0].touching_ground || Left_and_Right[1].touching_ground)
+        {
+            animator.SetInteger("Action", 4);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

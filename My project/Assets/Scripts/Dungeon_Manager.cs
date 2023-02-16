@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 public class Dungeon_Manager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class Dungeon_Manager : MonoBehaviour
     public bool won = false;
     public float escape_timer = 30;
     public GameObject safe_zone;
+    public GameObject collapse;
+    public Vector3 player_location;
+    private bool collapsed = false;
+    private CinemachineVirtualCamera Vcamera;
     //UI
     public TextMeshProUGUI timer;
     public Button resume;
@@ -20,6 +25,7 @@ public class Dungeon_Manager : MonoBehaviour
     public GameObject win_screen;
     private void Start()
     {
+        Vcamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CinemachineVirtualCamera>();
         Time.timeScale = 1;
         resume.onClick.AddListener(pause_play);
         timer.text = "Objective: Find the treasure!";
@@ -49,12 +55,21 @@ public class Dungeon_Manager : MonoBehaviour
         //if time to escape runs out 
         if (!exploring_stage && escape_timer <= 0)
         {
+            screenShake();
             game_over = true;
             timer.text = "Objective: Failed";
+            if (!collapsed)
+            {
+                player_location = GameObject.Find("Player").transform.position;
+                Instantiate(collapse, new Vector3(player_location.x, player_location.y - .5f, player_location.z), transform.rotation);
+                collapsed = true;
+                GameObject.Find("Player").GetComponent<Player_Script>().health = 0;
+            }
         }
         //countdown
         else if (!exploring_stage && !game_over)
         {
+            screenShake();
             safe_zone.SetActive(true);
             escape_timer -= Time.deltaTime;
             timer.text = "Objective: Escape!   Time until collapse: " + (int)escape_timer;
@@ -73,5 +88,9 @@ public class Dungeon_Manager : MonoBehaviour
             Time.timeScale = 0;
         }
         
+    }
+    private void screenShake()
+    {
+        Vcamera.m_Lens.OrthographicSize = Random.Range(6.5f, 6.8f);
     }
 }

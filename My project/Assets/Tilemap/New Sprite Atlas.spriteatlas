@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+    - {fileID: 2800000, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+    - {fileID: 2800000, guid: 5e1bd9bd16ddcbe499a588c166e522c2, type: 3}
+    - {fileID: 2800000, guid: a251b1e9311a5d24cbd638db4bd83e47, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -1145722877, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: -657243951, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: -541688126, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: -1278585102, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: 342758470, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: 865294234, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: 1214691532, guid: 241a9df6bbb157a44bf8cf5e7af1066c, type: 3}
+  - {fileID: -1904306058, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 706038168, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -598629192, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -1781156208, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -1174270126, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 228033852, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -1037655820, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 1784082221, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -1025335721, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 1392700263, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 155191286, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -798721003, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 1431456195, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 1969402472, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -1491316510, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: 1588663764, guid: 6ca4155712d685243aad508fb709f837, type: 3}
+  - {fileID: -221341781, guid: a251b1e9311a5d24cbd638db4bd83e47, type: 3}
+  - {fileID: 991464006, guid: a251b1e9311a5d24cbd638db4bd83e47, type: 3}
+  - {fileID: 723145141, guid: a251b1e9311a5d24cbd638db4bd83e47, type: 3}
+  - {fileID: 411763280, guid: a251b1e9311a5d24cbd638db4bd83e47, type: 3}
+  - {fileID: 1261296708, guid: 5e1bd9bd16ddcbe499a588c166e522c2, type: 3}
+  - {fileID: -1490977625, guid: 5e1bd9bd16ddcbe499a588c166e522c2, type: 3}
+  - {fileID: 1381951779, guid: 5e1bd9bd16ddcbe499a588c166e522c2, type: 3}
+  - {fileID: 1293653477, guid: 5e1bd9bd16ddcbe499a588c166e522c2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Backround_Dungeon_4
+  - Backround_Dungeon_5
+  - Backround_Dungeon_6
+  - Backround_Dungeon_0
+  - Backround_Dungeon_1
+  - Backround_Dungeon_2
+  - Backround_Dungeon_3
+  - Dungeon_TileSet_12
+  - Dungeon_TileSet_13
+  - Dungeon_TileSet_10
+  - Dungeon_TileSet_11
+  - Dungeon_TileSet_14
+  - Dungeon_TileSet_15
+  - Dungeon_TileSet_7
+  - Dungeon_TileSet_6
+  - Dungeon_TileSet_5
+  - Dungeon_TileSet_4
+  - Dungeon_TileSet_3
+  - Dungeon_TileSet_2
+  - Dungeon_TileSet_1
+  - Dungeon_TileSet_0
+  - Dungeon_TileSet_9
+  - Dungeon_TileSet_8
+  - Corner_Bricks_Set_1
+  - Corner_Bricks_Set_0
+  - Corner_Bricks_Set_3
+  - Corner_Bricks_Set_2
+  - Inside_Corner_EdgeBricks_Set_1
+  - Inside_Corner_EdgeBricks_Set_0
+  - Inside_Corner_EdgeBricks_Set_3
+  - Inside_Corner_EdgeBricks_Set_2
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0

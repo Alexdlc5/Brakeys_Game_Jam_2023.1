@@ -8,6 +8,7 @@ TagManager:
   - Safe zone
   - Kill
   - Damage
+  - Pushable
   layers:
   - Default
   - TransparentFX
