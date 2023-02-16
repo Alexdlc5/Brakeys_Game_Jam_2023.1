@@ -91,6 +91,6 @@ public class Dungeon_Manager : MonoBehaviour
     }
     private void screenShake()
     {
-        Vcamera.m_Lens.OrthographicSize = Random.Range(6.5f, 6.8f);
+        Vcamera.m_Lens.OrthographicSize = Random.Range(6.6f, 6.7f);
     }
 }
