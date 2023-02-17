@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Player_Script : MonoBehaviour
 {
+    public AudioSource jump_sound;
+    public AudioSource die_sound;
+    private bool DS_played = false;
+    public AudioSource pickup_sound;
     public Ground_Check[] Left_and_Right;
     public float respawn_delay = 1;
     public float health = 10;
@@ -27,6 +31,11 @@ public class Player_Script : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (!DS_played)
+            {
+                DS_played = true;
+                die_sound.Play();
+            }
             animator.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             blood.Play();
             dm.game_over = true;
@@ -45,6 +54,7 @@ public class Player_Script : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    jump_sound.Play();
                     rb.AddForce(Vector2.up * jump_power);
                 }
             }    

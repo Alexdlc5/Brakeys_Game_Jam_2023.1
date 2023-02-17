@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sensor : MonoBehaviour
 {
+    public AudioSource sound;
     public bool dont_deactivate = false;
     public Animator animator;
     public bool pressure_anim_playing = false;
@@ -25,6 +26,7 @@ public class Sensor : MonoBehaviour
             }
             else if (!damage_active) 
             {
+                sound.Play();
                 object_to_show.SetActive(true);
                 activation_timer = 0;
                 damage_active = true;

@@ -10,6 +10,7 @@ public class Treasure : MonoBehaviour
         if (collision.gameObject.name.Equals("Player") && Input.GetKey(KeyCode.E))
         {
             dm.exploring_stage = false;
+            GameObject.Find("Player").GetComponent<Player_Script>().pickup_sound.Play();
             Destroy(gameObject);
         }
     }

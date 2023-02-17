@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Rubble_Animation : MonoBehaviour
 {
+    public AudioSource audio;
+    public bool audio_played = false;
     public float animation_time = 12 / 60;
     Animator animator;
     bool stopped = false;
@@ -18,6 +20,11 @@ public class Rubble_Animation : MonoBehaviour
     {
         if (!stopped && gameObject.activeSelf)
         {
+            if (!audio_played)
+            {
+                audio_played = true;
+                audio.Play();
+            }
             if (animation_time > 0)
             {
                 animation_time -= Time.deltaTime;
