@@ -2562,7 +2562,7 @@ Tilemap:
       - {fileID: 1355248403, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
       - {fileID: -1738900139, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
       - {fileID: 1904538683, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
-      m_AnimationSpeed: 2.5500002
+      m_AnimationSpeed: 2.55
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -43, y: -5, z: 0}
@@ -2571,7 +2571,7 @@ Tilemap:
       - {fileID: 1355248403, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
       - {fileID: -1738900139, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
       - {fileID: 1904538683, guid: 8a6881849f0e35446a77dd5dc8a99c45, type: 3}
-      m_AnimationSpeed: 2.55
+      m_AnimationSpeed: 2.5500002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -42, y: -5, z: 0}
@@ -3578,7 +3578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -69, y: -21}
+  m_AnchoredPosition: {x: -69, y: -1026}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1530421020
