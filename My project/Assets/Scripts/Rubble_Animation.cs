@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rubble_Animation : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource raudio;
     public bool audio_played = false;
     public float animation_time = 12 / 60;
     Animator animator;
@@ -23,7 +23,7 @@ public class Rubble_Animation : MonoBehaviour
             if (!audio_played)
             {
                 audio_played = true;
-                audio.Play();
+                raudio.Play();
             }
             if (animation_time > 0)
             {

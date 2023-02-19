@@ -19,11 +19,11 @@ public class Player_Script : MonoBehaviour
     public Dungeon_Manager dm;
     public Animator animator;
     public ParticleSystem blood;
-    private BoxCollider2D collider2D;
+    private BoxCollider2D pcollider2D;
     private bool R = false;
     private void Start()
     {
-        collider2D = GetComponent<BoxCollider2D>();
+        pcollider2D = GetComponent<BoxCollider2D>();
         blood.Pause();
     }
     // Update is called once per frame
@@ -67,8 +67,8 @@ public class Player_Script : MonoBehaviour
     private void FixedUpdate()
     {
         //set defaults 
-        collider2D.size = new Vector2(collider2D.size.x, 1.512317f);
-        collider2D.offset = new Vector2(collider2D.offset.x, -0.05671078f);
+        pcollider2D.size = new Vector2(pcollider2D.size.x, 1.512317f);
+        pcollider2D.offset = new Vector2(pcollider2D.offset.x, -0.05671078f);
         animator.SetInteger("Action", 0);
         if (!dm.game_over)
         {
@@ -88,8 +88,8 @@ public class Player_Script : MonoBehaviour
         if (!groundCollider.touching_ground)
         {
             animator.SetInteger("Action", 3);
-            collider2D.size = new Vector2(collider2D.size.x, 1.179658f);
-            collider2D.offset = new Vector2(collider2D.offset.x, 0.1096186f);
+            pcollider2D.size = new Vector2(pcollider2D.size.x, 1.179658f);
+            pcollider2D.offset = new Vector2(pcollider2D.offset.x, 0.1096186f);
         } 
         animator.SetBool("R", R);
         if (Left_and_Right[0].touching_ground || Left_and_Right[1].touching_ground)
