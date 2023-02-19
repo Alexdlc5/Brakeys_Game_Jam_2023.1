@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf1dab834d4ec34195b920ea7bbf9ec, type: 3}
   m_Name: HDRenderPipelineAsset
   m_EditorClassIdentifier: 
-  <frameSettingsHistory>k__BackingField: 0
   m_RenderPipelineSettings:
     supportShadowMask: 1
     supportSSR: 0
@@ -28,11 +27,11 @@ MonoBehaviour:
     supportVolumetricClouds: 0
     supportLightLayers: 0
     supportDistortion: 1
-    supportTransparentBackface: 0
-    supportTransparentDepthPrepass: 0
+    supportTransparentBackface: 1
+    supportTransparentDepthPrepass: 1
     supportTransparentDepthPostpass: 1
     colorBufferFormat: 74
-    supportCustomPass: 0
+    supportCustomPass: 1
     customBufferFormat: 8
     supportedLitShaderMode: 2
     planarReflectionResolution:
@@ -44,9 +43,9 @@ MonoBehaviour:
     supportSurfaceGradient: 1
     decalNormalBufferHP: 0
     msaaSampleCount: 1
-    supportMotionVectors: 0
+    supportMotionVectors: 1
     supportRuntimeAOVAPI: 0
-    supportDitheringCrossFade: 0
+    supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportProbeVolume: 0
     probeVolumeMemoryBudget: 1024
@@ -65,6 +64,7 @@ MonoBehaviour:
       reflectionProbeFormat: 74
       skyReflectionSize: 256
       skyLightingOverrideLayerMask:
+        serializedVersion: 2
         m_Bits: 0
       supportFabricConvolution: 0
       maxDirectionalLightsOnScreen: 16
@@ -153,16 +153,16 @@ MonoBehaviour:
       - 8
       - 13
       DoFResolution: 040000000200000001000000
-      DoFHighQualityFiltering: 
-      DoFPhysicallyBased: 
+      DoFHighQualityFiltering: 000101
+      DoFPhysicallyBased: 000000
       MotionBlurSampleCount: 04000000080000000c000000
       BloomRes: 040000000200000002000000
-      BloomHighQualityFiltering: 
-      BloomHighQualityPrefiltering: 
+      BloomHighQualityFiltering: 000101
+      BloomHighQualityPrefiltering: 000001
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:
-        m_Values: 
+        m_Values: 000001
         m_SchemaId:
           m_Id: With3Levels
     maximumLODLevel:
@@ -178,26 +178,26 @@ MonoBehaviour:
         m_Id: With3Levels
     lightingQualitySettings:
       AOStepCount: 040000000600000010000000
-      AOFullRes: 
+      AOFullRes: 000001
       AOMaximumRadiusPixels: 200000002800000050000000
-      AOBilateralUpsample: 
+      AOBilateralUpsample: 000101
       AODirectionCount: 010000000200000004000000
       ContactShadowSampleCount: 060000000a00000010000000
       SSRMaxRaySteps: 100000002000000040000000
       SSGIRaySteps: 200000004000000080000000
-      SSGIDenoise: "\x01\x01\x01"
-      SSGIHalfResDenoise: "\x01"
+      SSGIDenoise: 010101
+      SSGIHalfResDenoise: 010000
       SSGIDenoiserRadius:
       - 0.75
       - 0.5
       - 0.5
-      SSGISecondDenoise: "\x01\x01\x01"
+      SSGISecondDenoise: 010101
       RTAORayLength:
       - 0.5
       - 3
       - 20
       RTAOSampleCount: 010000000200000008000000
-      RTAODenoise: "\x01\x01\x01"
+      RTAODenoise: 010101
       RTAODenoiserRadius:
       - 0.25
       - 0.5
@@ -206,19 +206,19 @@ MonoBehaviour:
       - 50
       - 50
       - 50
-      RTGIFullResolution: 
+      RTGIFullResolution: 000001
       RTGIClampValue:
       - 2
       - 3
       - 5
       RTGIRaySteps: 200000003000000040000000
-      RTGIDenoise: "\x01\x01\x01"
-      RTGIHalfResDenoise: "\x01"
+      RTGIDenoise: 010101
+      RTGIHalfResDenoise: 010000
       RTGIDenoiserRadius:
       - 1
       - 1
       - 1
-      RTGISecondDenoise: "\x01\x01\x01"
+      RTGISecondDenoise: 010101
       RTRMinSmoothness:
       - 0.6
       - 0.4
@@ -235,11 +235,11 @@ MonoBehaviour:
       - 0.8
       - 1
       - 1.2
-      RTRFullResolution: 
+      RTRFullResolution: 000001
       RTRRayMaxIterations: 200000003000000040000000
-      RTRDenoise: "\x01\x01\x01"
+      RTRDenoise: 010101
       RTRDenoiserRadius: 080000000c00000010000000
-      RTRSmoothDenoising: "\x01"
+      RTRSmoothDenoising: 010000
       Fog_ControlMode: 000000000000000000000000
       Fog_Budget:
       - 0.166
@@ -249,7 +249,6 @@ MonoBehaviour:
       - 0.666
       - 0.666
       - 0.5
-    m_ObsoleteincreaseSssSampleCount: 0
     m_ObsoleteLightLayerName0: 
     m_ObsoleteLightLayerName1: 
     m_ObsoleteLightLayerName2: 
@@ -278,7 +277,6 @@ MonoBehaviour:
     - format: 0
       sizeInMegaBytes: 128
   m_UseRenderGraph: 1
-  defineArray: []
   m_Version: 21
   m_ObsoleteFrameSettings:
     overrides: 0
@@ -431,7 +429,6 @@ MonoBehaviour:
     sssQualityLevel: 0
     sssCustomSampleBudget: 0
     msaaMode: 0
-    sssResolvedSampleBudget: 0
     materialQuality: 0
   m_ObsoleteBakedOrCustomReflectionFrameSettingsMovedToDefaultSettings:
     bitDatas:
@@ -447,7 +444,6 @@ MonoBehaviour:
     sssQualityLevel: 0
     sssCustomSampleBudget: 0
     msaaMode: 0
-    sssResolvedSampleBudget: 0
     materialQuality: 0
   m_ObsoleteRealtimeReflectionFrameSettingsMovedToDefaultSettings:
     bitDatas:
@@ -463,7 +459,6 @@ MonoBehaviour:
     sssQualityLevel: 0
     sssCustomSampleBudget: 0
     msaaMode: 0
-    sssResolvedSampleBudget: 0
     materialQuality: 0
   m_ObsoleteRenderPipelineResources: {fileID: 0}
   m_ObsoleteRenderPipelineRayTracingResources: {fileID: 0}
